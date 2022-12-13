@@ -1,7 +1,7 @@
 {
-	"name": "telegram-bot",
+	"name": "luna-bot",
 	"version": "1.1.0",
-	"description": "A simple telegram bot build with node js",
+	"description": "Um simples bot para o telegram feito com NodeJS",
 	"main": "index.js",
 	"directories": {
 		"lib": "lib"
@@ -24,8 +24,8 @@
 		"bot",
 		"telegram-bot"
 	],
-	"author": "LoL Human",
-	"license": "ISC",
+	"author": "Lune",
+	"license": "GPLv3",
 	"bugs": {
 		"url": "https://github.com/LoL-Human/TelegramBot-NodeJS/issues"
 	},
