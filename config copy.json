@@ -2,6 +2,6 @@
     "bot_token": "...",
     "owner": "Seu nome",
     "ownerLink": "https://t.me/ seu link",
-    "version": "1.1.0",
+    "version": "1.1.0", 
     "prefix": "/" 
 }
