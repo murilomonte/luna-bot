@@ -1,8 +1,7 @@
 {
-    "apikey": "",
-    "bot_token": "",
-    "owner": "LoL Human",
-    "ownerLink": "https://t.me/LoLHumen",
+    "bot_token": "...",
+    "owner": "Seu nome",
+    "ownerLink": "https://t.me/ seu link",
     "version": "1.1.0",
     "prefix": "/"
 }
