@@ -8,7 +8,7 @@ const { validateURL } = require("../../utils/youtube-url-utils");
 
 exports.yta = async(luna) => {
     try {
-        if (args.length < 1) return await luna.reply(`Acho que você esqueceu de enviar o link.`);
+        if (args.length < 1) return await luna.reply(`Você tem que enviar esse comando seguido de um link.\nEx: /yta https://youtu.be/...`);
         let { url, opt } = textParse(args.join(" "));
         if (!validateURL(url)) return await luna.reply(lang.ptbr.util.download.notYTURL);
         await luna.reply("Irei provicenciar!");
