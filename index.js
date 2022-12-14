@@ -1,17 +1,20 @@
 const { fetchJson, range, parseMarkdown } = require('./lib/function')
 const { Telegraf, Context } = require('telegraf')
-const help = require('./lib/help')
-const tele = require('./lib/tele')
 const chalk = require('chalk')
 const os = require('os')
 const fs = require('fs')
+
+// commands 
+const help = require('./lib/help')
+const tele = require('./lib/tele')
+const yta = require('./command/download/yta.js')
 
 const { apikey, bot_token, owner, ownerLink, version, prefix } = JSON.parse(fs.readFileSync(`./config.json`))
 
 let entertainment = {}
 
 if (bot_token == '') {
-	return console.log('=== BOT TOKEN CANNOT BE EMPTY ===')
+	console.log('=== BOT TOKEN CANNOT BE EMPTY ===')
 }
 
 const bot = new Telegraf(bot_token)
@@ -156,6 +159,9 @@ bot.on('message', async (luna) => {
 			case 'test':
 				test = await bot.telegram.getChatMembersCount(luna.message.chat.id)
 				console.log(test)
+				break
+			case 'yta':
+				await yta.yta(luna)
 				break
 		}
 	} catch (e) {

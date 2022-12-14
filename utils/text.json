@@ -1,0 +1,130 @@
+{
+	"indo": {
+		"stick": "Silahkan kirim/reply gambar/video/dokumen yang ingin di convert ke sticker.\nPastikan ukuran tidak melebihi 2MB dan durasi tidak lebih 10detik.",
+		"stickmeme": "Silahkan kirim/reply gambar/dokumen yang ingin di convert ke sticker.\nTidak mendukung video untuk sementara waktu.",
+		"memeImg": "Silahkan kirim/reply gambar/dokumen yang ingin ditambahkan teks didalam nya.\nTidak mendukung video untuk sementara waktu.",
+		"util": {
+			"toimg": {
+				"msg": "Silahkan reply sticker yang ingin di convert ke media.",
+				"fail": "Gagal convert sticker ke media."
+			},
+			"download": {
+				"igFail": "Gagal mengunduh media instagram dari link yang diberikan.",
+				"twittFail": "Gagal mengunduh media twitter dari link yang diberikan.",
+				"progress": "_Sedang diproses, harap tunggu..._",
+				"ttFail": "Gagal mengunduh video TikTok dari link yang diberikan.",
+				"fbFail": "Gagal mengunduh video Facebook dari link yang diberikan.",
+				"fbPriv": "Tampaknya tautan ini menuju ke sebuah postingan privat."
+			}
+		},
+		"group": {
+			"promote": {
+				"success": "Berhasil menaikan jabatan",
+				"fail": "Gagal menaikan jabatan",
+				"noPerms": "kamu bukan admin grup.",
+				"botNoPerms": "Bot bukan admin grup."
+			},
+			"demote": {
+				"success": "Berhasil menurunkan jabatan",
+				"fail": "Gagal menurunkan jabatan",
+				"noPerms": "kamu bukan admin grup.",
+				"botNoPerms": "Bot bukan admin grup."
+			},
+			"tagall": {
+				"noPerms": "kamu bukan admin grup."
+			},
+			"gcset": {
+				"noPerms": "kamu bukan admin grup.",
+				"botNoPerms": "Bot bukan admin grup.",
+				"fail": "Gagal merubah setelan group.",
+				"success": "Berhasil merubah setelan group."
+			}
+		}
+	},
+	"eng": {
+		"stick": "Please send/reply the image/video/document you want to convert to a sticker.\nMake sure the size does not exceed 2MB and max duration is 10second(s).",
+		"stickmeme": "Please send/reply the image/document you want to convert to a sticker.\nTemporarily does not support video.",
+		"memeImg": "Please send/reply the image/document you want to add text inside.\nTemporarily does not support video.",
+		"util": {
+			"toimg": {
+				"msg": "Please reply to the sticker you want to convert to media.\nOnly can decrypt non-animated stickers.",
+				"fail": "Failed to convert sticker to media."
+			},
+			"download": {
+				"igFail": "Failed to download instagram media from the given link.",
+				"twittFail": "Failed to download twitter media from the given link.",
+				"progress": "_In progress, please wait..._",
+				"ttFail": "Failed to download TikTok video from the given link.",
+				"fbFail": "Failed to download Facebook video from the given link.",
+				"fbPriv": "This link appears to be leading to a private post.",
+				"notYTURL": "Invalid YouTube URL.\nTry !yts to search a video on YouTube."
+			}
+		},
+		"group": {
+			"promote": {
+				"success": "Successfully promoted",
+				"fail": "Failed to promote",
+				"noPerms": "you are not the group admin.",
+				"botNoPerms": "Bots are not group admins."
+			},
+			"demote": {
+				"success": "Successfully demoted",
+				"fail": "Failed to demote",
+				"noPerms": "you are not the group admin.",
+				"botNoPerms": "Bots are not group admins."
+			},
+			"tagall": {
+				"noPerms": "you are not the group admin."
+			},
+			"gcset": {
+				"noPerms": "you are not the group admin.",
+				"botNoPerms": "Bots are not group admins.",
+				"fail": "Failed to change group settings.",
+				"success": "Successfully changed group settings."
+			}
+		}
+	},
+	"ptbr": {
+		"stick": "Envie ou responda uma imagem/vídeo/documento que eu converto em sticker rapidinho :).\nSó certifique-se de que o tamanho não seja maior que 2 MB e a duração máxima seja de 10 segundos.",
+		"stickmeme": "Envie ou responda uma imagem/vídeo/documento que eu converto em sticker rapidinho :)\nInfelizmente não faço de videos :/ (por enquanto)",
+		"memeImg": "Envie ou responda uma imagem/video/documento que eu adiciono um texto nele, igual um meme da SAM.\nInfelizmente não faço de videos :/ (por enquanto)",
+		"util": {
+		  "toimg": {
+			"msg": "Responda um sticker que eu converto em uma imagem pra você :)\nInfelizmente só consigo transformar stickers não animados :/.",
+			"fail": "Algum erro ocorreu ao tentar converter o sticker... :(\nTente novamente."
+		  },
+		  "download": {
+			"igFail": "Não foi possível baixar a mídia do instagram :/\nVerifique o link ou tente novamente mais tarde :)",
+			"twittFail": "Não foi possível baixar a mídia do twitter :/\nVerifique o link ou tente novamente mais tarde :)",
+			"progress": "Um minutinho...\nQuase lá!",
+			"ttFail": "Não foi possível baixar a mídia do tiktok :/\nVerifique o link ou tente novamente mais tarde :)",
+			"fbFail": "Não foi possível baixar a mídia do facebook :/\nVerifique o link ou tente novamente mais tarde :)",
+			"fbPriv": "Esse link parece ser de um post privado... Infelizmente não tenho como baixar :/",
+			"notYTURL": "URL inválida.\nEnvie !yts ou pesquise o vídeo no youtube."
+		  }
+		},
+		"group": {
+		  "promote": {
+			"success": "Promovido com sucesso meu caro :)",
+			"fail": "Não foi possível promover :/",
+			"noPerms": "Você não tem permissão pra usar esse comando.",
+			"botNoPerms": "Preciso ser ademira pra poder usar esse comando :)"
+		  },
+		  "demote": {
+			"success": "Rebaixado com sucesso! :)",
+			"fail": "Não foi possível rebaixar :/",
+			"noPerms": "Você não tem permissão pra usar esse comando.",
+			"botNoPerms": "Preciso ser ademira pra poder usar esse comando :)"
+		  },
+		  "tagall": {
+			"noPerms": "Você não tem permissão pra usar esse comando."
+		  },
+		  "gcset": {
+			"fail": "Não foi possível rebaixar :/",
+			"noPerms": "Você não tem permissão pra usar esse comando.",
+			"botNoPerms": "Preciso ser ademira pra poder usar esse comando :)",
+			"success": "Configurações do grupo alteradas com sucesso! :)"
+		  }
+		}
+	  }
+}
