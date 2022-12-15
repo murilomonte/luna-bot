@@ -1,6 +1,7 @@
 // thanks to FaizBastomi (https://github.com/FaizBastomi)
 
 const Bluebird = require("bluebird");
+const moment = require("moment-timezone");
 const https = require("https");
 const axios = require("axios").default;
 const { fromBuffer } = require("file-type");
@@ -93,10 +94,14 @@ const UserAgent = () => {
 	return res;
 };
 
+const calculatePing = function (timestamp, now) {
+	return moment.duration(now - moment(timestamp * 1000)).asSeconds();
+};
 
 module.exports = {
 	fetchText,  
 	fetchBuffer,
 	textParse,
-    UserAgent
+    UserAgent,
+	calculatePing
 };

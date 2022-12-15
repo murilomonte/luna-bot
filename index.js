@@ -13,6 +13,7 @@ const twtdl = require('./command/download/twitter.js')
 const yts = require('./command/download/yts.js')
 const gsearch = require('./command/other/gsearch.js')
 const play = require('./command/download/play')
+const ping = require('./command/misc/ping.js')
 
 const { apikey, bot_token, owner, ownerLink, version, prefix } = JSON.parse(fs.readFileSync(`./config.json`))
 
@@ -184,6 +185,10 @@ bot.on('message', async (luna) => {
 				break
 			case 'gsearch':
 				await gsearch.gsearch(luna)
+				break
+			// misc
+			case 'ping':
+				await ping.ping(luna)
 				break
 		}
 	} catch (e) {

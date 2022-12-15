@@ -35,9 +35,11 @@ exports.ytv = async(luna) => {
                     */
                     await luna.replyWithVideo(
                         { source: await fetchBuffer(res.dl_link, { skipSSL: true }) },
-                        { caption: capt },
-                        { width: 1080 },
-                        { height: 720 },
+                        { 
+                            caption: capt,
+                            width: 1080, 
+                            height: 720
+                        }
                     )
                     
                 }
