@@ -12,6 +12,7 @@ const ytv = require('./command/download/ytv.js')
 const twtdl = require('./command/download/twitter.js')
 const yts = require('./command/download/yts.js')
 const gsearch = require('./command/other/gsearch.js')
+const play = require('./command/download/play')
 
 const { apikey, bot_token, owner, ownerLink, version, prefix } = JSON.parse(fs.readFileSync(`./config.json`))
 
@@ -164,7 +165,6 @@ bot.on('message', async (luna) => {
 				test = await bot.telegram.getChatMembersCount(luna.message.chat.id)
 				console.log(test)
 				break
-			/* Download commands */
 			// youtube
 			case 'yta':
 				await yta.yta(luna)
@@ -174,6 +174,9 @@ bot.on('message', async (luna) => {
 				break
 			case 'yts':
 				await yts.yts(luna)
+				break
+			case 'play':
+				await play.play(luna)
 				break
 			// others
 			case 'twtdl':

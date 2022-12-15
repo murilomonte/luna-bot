@@ -23,10 +23,12 @@ exports.yta = async(luna) => {
                     await luna.reply(capt)
                 } else {
                     await luna.reply(lang.ptbr.util.download.progress);
-                    let fetch = await fetchBuffer(res.dl_link, { skipSSL: true })
-                    await luna.replyWithAudio( 
-                        { source: fetch },
-                        { title: res.title }
+                    await luna.replyWithAudio(
+                        { source: await fetchBuffer(res.dl_link, { skipSSL: true }), mimetype: "audio/mpeg" },
+                        {
+                            title: res.title,
+                            performer: 'MissLuna_Bot'
+                        }
                     );
                     await luna.reply('Prontinho!');
                 }
