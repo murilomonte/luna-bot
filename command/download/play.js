@@ -18,7 +18,7 @@ exports.play = async(luna) => {
 					`*Qualidade:* ${res.q}\n*Tamanho:* ${res.sizeF}\n*Download:* ${short}\n\n_O tamanho do arquivo é muito grande para ser enviado :(_`;
 				await luna.replyWithPhoto({ url: thumb }, { caption: capt });
 			} else {
-				let capt = `📙 *Título:* ${ytsData[0].title}\n📎 Url: ${ytsData[0].url}\n🚀 Data de upload: ${ytsData[0].ago}\nQualidade: ${res.q}\n\nDeseja o vídeo?\nTente enviar */ytv youtube_url*\n\nTô enviando a música, é rapidinho :)`
+				let capt = `*Título:* ${ytsData[0].title}\n📎 Url: ${ytsData[0].url}\nData de upload: ${ytsData[0].ago}\nQualidade: ${res.q}\n\nDeseja o vídeo?\nTente enviar */ytv youtube_url*\n\nTô enviando a música, é rapidinho :)`
 				await luna.replyWithPhoto(
 					{ source: thumb }, 
 					{ 
