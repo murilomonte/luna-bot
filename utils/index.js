@@ -1,13 +1,13 @@
 // thanks to FaizBastomi (https://github.com/FaizBastomi)
 
-const Bluebird = require("bluebird");
-const moment = require("moment-timezone");
-const https = require("https");
-const axios = require("axios").default;
-const { fromBuffer } = require("file-type");
+import Bluebird from "bluebird";
+import moment from "moment-timezone";
+import https from "https";
+import axios from "axios";
+import { fileTypeFromBuffer } from "file-type";
 // https://github.com/sindresorhus/file-type/issues/535
 
-const fetchText = async function (url) {
+export const fetchText = async function (url) {
 	let response;
 	try {
 		const resp = await axios.get(url, { responseType: "text" });
@@ -19,14 +19,14 @@ const fetchText = async function (url) {
 	}
 };
 
-const fetchBuffer = async (url, config = { skipSSL: false, fixAudio: false }) =>
+export const fetchBuffer = async (url, config = { skipSSL: false, fixAudio: false }) =>
 	new Bluebird(async (resolve, reject) => {
 		let data1, data2, data3, tmp, out;
 		try {
 			if (config.skipSSL) config = { httpsAgent: new https.Agent({ rejectUnauthorized: false }), ...config };
 			delete config.skipSSL;
 			data1 = await axios.get(url, { responseType: "arraybuffer", ...config });
-			const { ext } = await fromBuffer(data1.data);
+			const { ext } = await fileTypeFromBuffer(data1.data);
 			if (/webp/.test(ext)) {
 				tmp = join(__dirname, "../temp", getRandom() + ".webp");
 				out = tmp + ".png";
@@ -52,7 +52,7 @@ const fetchBuffer = async (url, config = { skipSSL: false, fixAudio: false }) =>
 		}
 	});
 
-const textParse = function (text) {
+export const textParse = function (text) {
 	const ytRex = /(?:https?:\/{2})?(?:w{3}|m|music)?\.?youtu(?:be)?\.(?:com|be)(?:watch\?v=|\/)([^\s&]+)/g;
 	const optRex = /--(?:doc|ptt)/g;
 	let ytUrl = text.match(ytRex);
@@ -60,7 +60,7 @@ const textParse = function (text) {
 	return { url: ytUrl == null ? "" : ytUrl[0], opt: opts == null ? "" : opts[0] };
 };
 
-const UserAgent = () => {
+export const UserAgent = () => {
 	const UA = [
 		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.1.2 Safari/605.1.15",
 		"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8",
@@ -94,14 +94,7 @@ const UserAgent = () => {
 	return res;
 };
 
-const calculatePing = function (timestamp, now) {
+export const calculatePing = function (timestamp, now) {
 	return moment.duration(now - moment(timestamp * 1000)).asSeconds();
 };
 
-module.exports = {
-	fetchText,  
-	fetchBuffer,
-	textParse,
-    UserAgent,
-	calculatePing
-};

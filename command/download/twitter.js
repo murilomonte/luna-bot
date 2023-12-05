@@ -1,8 +1,10 @@
-const Downloader = require("../../utils/downloader");
-const { getInfo } = new Downloader();
-const lang = require("../../utils/text.json");
+import Downloader from "../../utils/downloader.js";
+import fs from "fs" 
 
-exports.twtdl = async(luna) => {
+const lang = JSON.parse(fs.readFileSync(`./utils/text.json`))
+const { getInfo } = new Downloader();
+
+export let twtdl = async(luna) => {
 	if (!args.length > 0 || !args[0].includes("twitter.com") || args[0].includes("t.co"))
 	return await luna.reply("Você deve enviar esse comando seguido de um link.\nEx: /twtdl https://twitter.com/...");
 	getInfo(args[0])

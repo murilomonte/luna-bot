@@ -1,7 +1,9 @@
-const gsearch = require("googlethis");
-const lang = require("../../utils/text.json");
+import gsearch from "googlethis";
+import fs from "fs" 
 
-exports.gsearch = async(luna) => {
+const lang = JSON.parse(fs.readFileSync(`./utils/text.json`))
+
+export let gsearchc = async(luna) => {
 	if (!args.length > 0) return await luna.reply("É preciso de um termo para pesquisa.");
 	let gResult,
 		data = null,

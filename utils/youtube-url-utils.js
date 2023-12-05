@@ -9,7 +9,7 @@ const validQueryDomains = new Set([
 ]);
 
 const validPathDomains = /^https?:\/\/(youtu\.be\/|(www\.)?youtube\.com\/(embed|v|shorts)\/)/;
-const getYoutubeID = function (link) {
+export const getYoutubeID = function (link) {
 	const parsed = new URL(link);
 	let id = parsed.searchParams.get("v");
 	if (validPathDomains.test(link) && !id) {
@@ -28,7 +28,7 @@ const getYoutubeID = function (link) {
 	return id;
 };
 
-const validateURL = (url) => {
+export const validateURL = (url) => {
 	try {
 		getYoutubeID(url);
 		return true;
@@ -39,8 +39,3 @@ const validateURL = (url) => {
 
 const idRegex = /^[a-zA-Z0-9-_]{11}$/;
 const validateID = (id) => idRegex.test(id);
-
-module.exports = {
-	getYoutubeID,
-	validateURL,
-};

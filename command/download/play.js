@@ -1,8 +1,9 @@
-const Downloader = require("../../utils/downloader");
-const { yt, yts } = new Downloader();
-const { fetchBuffer, fetchText } = require("../../utils");
+import Downloader from "../../utils/downloader.js";
+import { fetchBuffer, fetchText } from "../../utils/index.js";
 
-exports.play = async(luna) => {
+const { yt, yts } = new Downloader();
+
+export let play = async(luna) => {
 		if (args.length < 1) return await luna.reply("Sem resultados para a busca. :/");
 		const ytsData = await yts(args.join(" "), "short");
 		if (!ytsData.length > 0) return await luna.reply("Não foi encontrado nenhum vídeo com esse nome. :/\nTente outro.");

@@ -1,10 +1,12 @@
-const Downloader = require("../../utils/downloader.js");
-const { yt } = new Downloader();
-const { fetchText, textParse, fetchBuffer } = require("../../utils");
-const lang = require("../../utils/text.json");
-const { validateURL } = require("../../utils/youtube-url-utils"); 
+import Downloader from "../../utils/downloader.js";
+import { fetchBuffer, fetchText, textParse } from "../../utils/index.js";
+import { validateURL } from "../../utils/youtube-url-utils.js"; 
+import fs from "fs" 
 
-exports.ytv = async(luna) => {
+const { yt } = new Downloader();
+const lang = JSON.parse(fs.readFileSync(`./utils/text.json`))
+
+export let ytv = async(luna) => {
     try {
         if (args.length < 1) return await luna.reply(`Você deve enviar esse comando seguido de um link.\nEx: /ytv https://youtu.be/...`);
         let { url, opt } = textParse(args.join(" "));

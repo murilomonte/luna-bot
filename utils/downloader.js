@@ -1,14 +1,16 @@
 // thanks to FaizBastomi (https://github.com/FaizBastomi)
 
-const axios = require("axios").default;
-const cheerio = require("cheerio");
-const Util = require("util");
+// axios é default
+import axios from "axios"
+import cheerio from "cheerio"
+import Util from "util"
+
 const API_GUEST = "https://api.twitter.com/1.1/guest/activate.json";
 const API_TIMELINE = "https://api.twitter.com/2/timeline/conversation/%s.json?tweet_mode=extended";
 const AUTH =
 	"Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA";
 
-const igdl = require("./instagram");
+// import { igdl } from "./instagram.js";
 
 /**
  * Request to website
@@ -109,7 +111,8 @@ async function muiscallyPost(postData, sess, ua) {
 }
 
 
-class Downloader extends igdl {
+// export class Downloader extends igdl {
+export default class Downloader {
 	/**
 	 * Download from Twitter
 	 * @param {String} url Twitter URL
@@ -229,5 +232,3 @@ class Downloader extends igdl {
 	}
 }
 
-
-module.exports = Downloader;
