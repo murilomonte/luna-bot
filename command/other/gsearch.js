@@ -3,7 +3,7 @@ import fs from "fs"
 
 const lang = JSON.parse(fs.readFileSync(`./utils/text.json`))
 
-export let gsearchc = async(luna) => {
+export let gsearchc = async(luna, args) => {
 	if (!args.length > 0) return await luna.reply("É preciso de um termo para pesquisa.");
 	let gResult,
 		data = null,

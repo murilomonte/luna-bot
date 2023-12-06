@@ -1,10 +1,10 @@
 // thanks to FaizBastomi (https://github.com/FaizBastomi)
 
-const ytsr = require("yt-search");
-const ax = require("axios").default;
-const { UserAgent } = require("./index");
+import ytsr from "yt-search";
+import ax from "axios";
+import { UserAgent } from "./index.js";
 
-class YouTube {
+export class YouTube {
 	/**
 	 * Search on YouTube
 	 * @param {String} query Query to search
@@ -86,4 +86,3 @@ class YouTube {
 	}
 }
 
-module.exports = YouTube;

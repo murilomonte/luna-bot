@@ -20,7 +20,6 @@ import * as help from './lib/help.js'
 import { getArgs, getUser, getBot, getLink, getPhotoProfile, getFile } from './lib/tele.js'
 import { yta } from './command/download/yta.js'
 import { ytv } from './command/download/ytv.js'
-import { twtdl } from './command/download/twitter.js'
 import { ytsc } from './command/download/yts.js'
 import { gsearchc } from './command/other/gsearch.js'
 import { play } from './command/download/play.js'
@@ -181,23 +180,20 @@ bot.on('message', async (luna) => {
 				break
 			// youtube
 			case 'yta':
-				await yta(luna)
+				await yta(luna, args)
 				break
 			case 'ytv':
-				await ytv(luna)
+				await ytv(luna, args)
 				break
 			case 'yts':
 				await ytsc(luna, args)
 				break
 			case 'play':
-				await play(luna)
+				await play(luna, args)
 				break
 			// others
-			case 'twtdl':
-				await twtdl(luna)
-				break
 			case 'gsearch':
-				await gsearchc(luna)
+				await gsearchc(luna, args)
 				break
 			// misc
 			case 'ping':
